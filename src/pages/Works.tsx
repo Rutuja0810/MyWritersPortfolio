@@ -1,0 +1,102 @@
+import { useState } from "react";
+import BookCard from "@src/components/BookCard";
+import ScrollReveal from "@src/components/ScrollReveal";
+import PageTransition from "@src/components/PageTransition";
+import { Button } from "@src/components/ui/button";
+import fantasyBook from "@assets/generated_images/Fantasy_book_cover_one_8ba2aef9.png";
+import mysteryBook from "@assets/generated_images/Mystery_book_cover_two_ff101c37.png";
+import literatureBook from "@assets/generated_images/Literature_book_cover_three_4f080171.png";
+
+//todo: remove mock functionality
+const allBooks = [
+  {
+    title: "The Veil of Forgotten Names",
+    cover: fantasyBook,
+    genre: "Fantasy",
+    year: 2023,
+    excerpt: "In a world where names hold power and memories shape reality, a young archivist discovers that her forgotten past holds the key to preventing an ancient darkness from consuming everything she loves.",
+    purchaseLink: "https://example.com",
+  },
+  {
+    title: "Midnight at the Crossroads",
+    cover: mysteryBook,
+    genre: "Mystery",
+    year: 2022,
+    excerpt: "When a renowned detective vanishes during an investigation into a series of impossible crimes, her protégé must unravel a conspiracy that reaches into the highest echelons of power.",
+    purchaseLink: "https://example.com",
+  },
+  {
+    title: "The Weight of Unsaid Things",
+    cover: literatureBook,
+    genre: "Literary Fiction",
+    year: 2021,
+    excerpt: "Three generations of women confront the secrets that have shaped their family, discovering that sometimes the most profound truths are found in the silences between words.",
+    purchaseLink: "https://example.com",
+  },
+  {
+    title: "Echoes in the Dark",
+    cover: mysteryBook,
+    genre: "Mystery",
+    year: 2020,
+    excerpt: "A small coastal town harbors secrets that refuse to stay buried. When the past resurfaces, one woman must decide how far she'll go to protect the truth.",
+    purchaseLink: "https://example.com",
+  },
+  {
+    title: "Crown of Shattered Stars",
+    cover: fantasyBook,
+    genre: "Fantasy",
+    year: 2019,
+    excerpt: "An exiled princess and a rogue mage must form an uneasy alliance to reclaim a kingdom stolen by dark magic and ancient betrayals.",
+    purchaseLink: "https://example.com",
+  },
+];
+
+export default function Works() {
+  const [selectedGenre, setSelectedGenre] = useState<string>("All");
+  
+  const genres = ["All", "Fantasy", "Mystery", "Literary Fiction"];
+  
+  const filteredBooks = selectedGenre === "All" 
+    ? allBooks 
+    : allBooks.filter(book => book.genre === selectedGenre);
+
+  return (
+    <PageTransition>
+      <div className="font-quicksand pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="mb-12">
+              <h1 className="text-5xl md:text-6xl font-display font-bold mb-4 tracking-tight">Published Works</h1>
+              <p className="text-xl text-muted-foreground max-w-3xl">
+                A collection of stories spanning fantasy realms, mysterious investigations, and profound explorations of the human experience.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="flex flex-wrap gap-2 mb-12">
+              {genres.map((genre) => (
+                <Button
+                  key={genre}
+                  variant={selectedGenre === genre ? "default" : "outline"}
+                  onClick={() => setSelectedGenre(genre)}
+                  data-testid={`button-filter-${genre.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {genre}
+                </Button>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <div className="space-y-8">
+            {filteredBooks.map((book, index) => (
+              <ScrollReveal key={book.title} delay={index * 0.1}>
+                <BookCard {...book} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </PageTransition>
+  );
+}
