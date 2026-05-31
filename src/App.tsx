@@ -9,6 +9,9 @@ import About from "@src/pages/About";
 import Blog from "@src/pages/Blog";
 import Contact from "@src/pages/Contact";
 import NotFound from "@src/pages/not-found";
+import EmotionalTruthInFiction from "@src/pages/blog/EmotionalTruthInFiction";
+import EveryPersonCarriesAStory from "./pages/blog/EveryPersonCarriesAStory";
+import TheStoriesBeneathTheEmotion from "./pages/blog/TheStoriesBeneathTheEmotion";
 
 function Router() {
   return (
@@ -18,6 +21,10 @@ function Router() {
       <Route path="/about" element={<About/>} />
       <Route path="/blog" element={<Blog/>} />
       <Route path="/contact" element={<Contact/>} />
+      <Route path="/blog/emotional-truth-in-fiction" element={<EmotionalTruthInFiction/>} />
+      <Route path="/blog/every-person-carries-a-story" element={<EveryPersonCarriesAStory/>} />
+      <Route path="/blog/the-stories-beneath-the-emotion" element={<TheStoriesBeneathTheEmotion/>} />
+
       <Route element={<NotFound/>} />
     </Routes>
   );
