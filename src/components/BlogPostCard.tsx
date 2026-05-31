@@ -21,32 +21,47 @@ export default function BlogPostCard({
   readTime,
 }: BlogPostCardProps) {
   return (
-    <Link href={`/blog/${id}`}>
-      <a data-testid={`link-blog-${id}`}>
-        <Card className="p-6 h-full hover-elevate active-elevate-2 flex flex-col">
-          <div className="flex items-center gap-2 mb-3">
-            <Badge variant="secondary" data-testid="badge-category">
-              {category}
-            </Badge>
-            <div className="flex items-center text-sm text-muted-foreground">
-              <Calendar className="h-3 w-3 mr-1" />
-              <span>{date}</span>
-            </div>
+    <Link
+      to={`/blog/${id}`}
+      data-testid={`link-blog-${id}`}
+      className="block h-full"
+    >
+      <Card className="group h-full p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div className="flex items-center justify-between mb-5">
+          <Badge variant="secondary" data-testid="badge-category">
+            {category}
+          </Badge>
+
+          <div className="flex items-center text-sm text-muted-foreground">
+            <Calendar className="h-3 w-3 mr-1" />
+            <span>{date}</span>
           </div>
-          
-          <h3 className="text-xl font-display font-bold mb-3" data-testid="text-post-title">
-            {title}
-          </h3>
-          
-          <p className="text-sm leading-relaxed text-muted-foreground mb-4 flex-1" data-testid="text-excerpt">
-            {excerpt}
-          </p>
-          
-          <div className="text-xs text-muted-foreground">
+        </div>
+
+        <h3
+          className="text-2xl font-display font-bold leading-tight mb-4 transition-colors group-hover:text-primary"
+          data-testid="text-post-title"
+        >
+          {title}
+        </h3>
+
+        <p
+          className="text-muted-foreground leading-relaxed flex-1 mb-6"
+          data-testid="text-excerpt"
+        >
+          {excerpt}
+        </p>
+
+        <div className="flex items-center justify-between mt-auto">
+          <span className="text-sm text-muted-foreground">
             {readTime} read
-          </div>
-        </Card>
-      </a>
+          </span>
+
+          <span className="text-sm font-medium group-hover:translate-x-1 transition-transform">
+            Read Article →
+          </span>
+        </div>
+      </Card>
     </Link>
   );
 }
