@@ -61,7 +61,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          Author of Fantasy, Mystery & Literary Fiction
+          Crafting Fantastical Worlds, Hidden Mysteries, and Deeply Human Stories.
         </motion.p>
       </motion.div>
 

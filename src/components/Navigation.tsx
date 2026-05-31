@@ -15,20 +15,18 @@ export default function Navigation() {
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ];
-
+  const navTextColor = pathname === "/" ? "text-white" : "text-black";
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 text-white backdrop-blur-md bg-white/40 border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 text-white font-quicksand">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo / Site Title */}
           <Link
             to="/"
-            className="font-display text-2xl md:text-3xl font-bold hover-elevate active-elevate-2 px-2 py-1 rounded-md"
-            data-testid="link-home"
+            className={`font-display text-2xl md:text-3xl font-bold ${navTextColor}`}
           >
             Night Phlox
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {links.map((link) => (
@@ -41,13 +39,14 @@ export default function Navigation() {
                 <Link
                   to={link.href}
                   data-testid={`link-${link.label.toLowerCase()}`}
-                  className="text-base md:text-lg"
+
+                  className={`text-lg ${navTextColor}`}
                 >
                   {link.label}
                 </Link>
               </Button>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
 
           {/* Mobile Navigation */}
