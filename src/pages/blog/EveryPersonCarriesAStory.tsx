@@ -85,8 +85,8 @@ export default function EveryPersonCarriesAStory() {
           <ScrollReveal delay={0.2}>
             <div className="my-20">
               <QuoteBlock
-                quote="Every person carries a story.\nSome are spoken.\nOthers wait quietly to be discovered."
-                attribution="RJ"
+                quote="Every soul carries a story.\nSome are spoken.\nOthers wait quietly to be discovered."
+                attribution="Night Phlox"
               />
             </div>
           </ScrollReveal>

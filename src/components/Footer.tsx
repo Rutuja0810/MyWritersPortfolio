@@ -145,7 +145,7 @@ export default function Footer() {
           </p>
 
           <p className="text-sm text-muted-foreground italic">
-            Every story begins with a single voice.
+            Every story begins with a single thought.
           </p>
         </div>
       </div>

@@ -69,7 +69,7 @@ export default function Contact() {
               <div className="mt-10 max-w-2xl mx-auto">
                 <div className="border-l-2 pl-6 text-left">
                   <p className="text-2xl italic font-medium leading-relaxed">
-                    “Every story begins with a single voice. Thank you for
+                    “Every story begins with a single thought. Thank you for
                     sharing yours.”
                   </p>
 

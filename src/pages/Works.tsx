@@ -28,15 +28,13 @@ export default function Works() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero */}
           <ScrollReveal>
-            <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="text-center max-w-4xl mx-auto my-16">
               <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-6">
                 Published Works
               </h1>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
-                A collection of stories spanning fantasy realms, mysterious
-                investigations, and profound explorations of the human
-                experience.
+                Each story is a journey through enchanting worlds, forgotten myths, enduring love, and the mysteries that shape the human heart.
               </p>
 
               <p className="mt-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">
@@ -69,7 +67,7 @@ export default function Works() {
           </ScrollReveal>
 
           {/* Books */}
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-1">
             {filteredBooks.map((book, index) => (
               <ScrollReveal
                 key={book.title}

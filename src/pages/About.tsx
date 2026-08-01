@@ -8,21 +8,21 @@ export default function About() {
   return (
     <PageTransition>
       <div className="pt-24 pb-20 font-quicksand">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
             <ScrollReveal>
               <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                 <img
                   src={authorImage}
-                  alt="RJ"
+                  alt="Night Phlox"
                   className="w-full h-full object-cover"
                 />
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-8">
+              <h1 className="text-5xl md:text-7xl text-nowrap font-bold tracking-tight mb-8">
                 About Night Phlox
               </h1>
 
@@ -36,8 +36,8 @@ export default function About() {
               </p>
 
               <QuoteBlock
-                quote="Every person carries a story. 
-                I write to explore the worlds hidden within them."
+                quote="Every soul is a universe of forgotten dreams and untold stories. 
+                I write to breathe life into them."
               />
             </ScrollReveal>
           </div>
@@ -123,20 +123,18 @@ export default function About() {
                   </h3>
 
                   <ul className="space-y-3">
-                    <li>Fantasy rooted in emotion and wonder</li>
+                    <li>Fantasy rooted in emotion and wonder.</li>
                     <li>
-                      Mysteries built upon hidden truths and layered
-                      perspectives
+                      Mysteries built upon hidden truths and layered perspectives.
                     </li>
                     <li>
-                      Character-driven journeys shaped by choice and
-                      consequence
+                      Character-driven journeys shaped by choice and consequence.
                     </li>
                     <li>
-                      Stories where the past, present, and future intertwine
+                      Stories where the past, present, and future intertwine.
                     </li>
                     <li>
-                      Worlds inspired by nature, symbolism, and imagination
+                      Worlds inspired by nature, symbolism, and imagination.
                     </li>
                   </ul>
                 </div>
