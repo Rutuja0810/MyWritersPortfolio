@@ -48,7 +48,7 @@ export default function HeroSection() {
           "In the shadows between worlds, truth whispers its darkest secrets."
         </motion.blockquote>
         <motion.p
-          className="text-xl sm:text-2xl md:text-3xl font-display text-white/90 mb-2 tracking-wide"
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-white/90 mb-2 tracking-wide"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
@@ -56,7 +56,7 @@ export default function HeroSection() {
           Night Phlox
         </motion.p>
         <motion.p
-          className="text-base sm:text-lg text-white/70 font-sans tracking-wider"
+          className="text-base sm:text-lg text-white/70 font-medium tracking-wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -65,7 +65,7 @@ export default function HeroSection() {
         </motion.p>
       </motion.div>
 
-      <motion.button
+      {/* <motion.button
         onClick={scrollToContent}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 hover:text-white transition-colors"
         aria-label="Scroll to content"
@@ -74,7 +74,7 @@ export default function HeroSection() {
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
         <ChevronDown className="h-8 w-8" />
-      </motion.button>
+      </motion.button> */}
     </section>
   );
 }

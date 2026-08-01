@@ -23,11 +23,11 @@ export default function About() {
 
             <ScrollReveal delay={0.2}>
               <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-8">
-                About RJ
+                About Night Phlox
               </h1>
 
               <p className="text-xl leading-relaxed text-muted-foreground mb-8">
-                Writing under the pen name <strong>RJ</strong>, I create
+                Writing under the pen name <strong>Night Phlox</strong>, I create
                 fantasy, mystery, and literary fiction that explores the
                 connections between people, memory, destiny, and the unseen
                 forces that shape their lives. My stories often weave together

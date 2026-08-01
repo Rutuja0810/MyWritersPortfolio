@@ -11,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 import fantasyBook from "@assets/generated_images/Fantasy_book_cover_one_8ba2aef9.png";
 import mysteryBook from "@assets/generated_images/Mystery_book_cover_two_ff101c37.png";
 import literatureBook from "@assets/generated_images/Literature_book_cover_three_4f080171.png";
-import authorPhoto from "@assets/generated_images/Author_portrait_photo_6ec25566.png";
+import authorPhoto from "@assets/Night Phlox.png";
 
 //todo: remove mock functionality
 const featuredBooks = [
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="bg-card py-28">
+      <section className="font-quicksand bg-card py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -132,15 +132,11 @@ export default function Home() {
 
               <div>
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
-                  About Elena
+                  About Night Phlox
                 </h2>
 
                 <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                  Night Phlox is an award-winning author whose work explores the
-                  intersection of fantasy, mystery, and the raw depths of human
-                  emotion. Her novels have been praised for their intricate
-                  world-building, compelling characters, and unflinching
-                  examination of what it means to be human.
+                  Night Phlox is a fantasy author drawn to stories of love, mystery, and the quiet magic of nature. Her work blends emotional storytelling with myth, memory, and immersive world-building to create journeys that linger long after the final page. The Secret of Red Leaf is her debut published novel.
                 </p>
 
                 <Button variant="outline" size="lg" asChild>
