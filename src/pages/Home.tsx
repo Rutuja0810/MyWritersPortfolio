@@ -12,37 +12,10 @@ import fantasyBook from "@assets/generated_images/Fantasy_book_cover_one_8ba2aef
 import mysteryBook from "@assets/generated_images/Mystery_book_cover_two_ff101c37.png";
 import literatureBook from "@assets/generated_images/Literature_book_cover_three_4f080171.png";
 import authorPhoto from "@assets/Night Phlox.png";
+import books from '@src/lib/books'
 
 //todo: remove mock functionality
-const featuredBooks = [
-  {
-    title: "The Veil of Forgotten Names",
-    cover: fantasyBook,
-    genre: "Fantasy",
-    year: 2023,
-    excerpt:
-      "In a world where names hold power and memories shape reality, a young archivist discovers that her forgotten past holds the key to preventing an ancient darkness from consuming everything she loves.",
-    purchaseLink: "https://example.com",
-  },
-  {
-    title: "Midnight at the Crossroads",
-    cover: mysteryBook,
-    genre: "Mystery",
-    year: 2022,
-    excerpt:
-      "When a renowned detective vanishes during an investigation into a series of impossible crimes, her protégé must unravel a conspiracy that reaches into the highest echelons of power.",
-    purchaseLink: "https://example.com",
-  },
-  {
-    title: "The Weight of Unsaid Things",
-    cover: literatureBook,
-    genre: "Literary Fiction",
-    year: 2021,
-    excerpt:
-      "Three generations of women confront the secrets that have shaped their family, discovering that sometimes the most profound truths are found in the silences between words.",
-    purchaseLink: "https://example.com",
-  },
-];
+const featuredBooks = books
 
 //todo: remove mock functionality
 const recentPosts = [
@@ -96,7 +69,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-1 gap-8">
             {featuredBooks.map((book, index) => (
               <ScrollReveal key={book.title} delay={index * 0.1}>
                 <BookCard {...book} />
