@@ -1,4 +1,4 @@
-import fantasyBook from "@assets/generated_images/Fantasy_book_cover_one_8ba2aef9.png";
+import fantasyBook from "@assets/The secret of the red leaf.jpeg";
 
 const books = [
   {
